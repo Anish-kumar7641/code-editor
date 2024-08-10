@@ -1,0 +1,43 @@
+.Header-Main{
+    width:100%;
+    background: rgb(23, 20, 42);
+    height:3.5rem;
+    display:flex;
+    box-sizing: border-box;
+    align-items: center;
+}
+.Header-Inner{
+    width:70%;
+    margin:0% auto;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+.Header-Container-1{
+ background: none;
+ color: white;
+ font-size:1.2rem;
+ display:flex;
+ align-items: center;
+}
+.Header-Container-2{
+background: none;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-start;
+column-gap:1.5rem;
+}
+.Nav-Link{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+.Header-Button{
+    background-color: rgb(54 50 73);
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    padding:0.5rem 2rem;
+    border-radius: 6px;
+}

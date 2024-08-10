@@ -1,0 +1,77 @@
+.Problems-Main-Div {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: auto;
+  justify-content: flex-start;
+}
+.Problems-Div-1 {
+  width: 100%;
+  display: flex;
+  /* padding: 0.5rem 0rem; */
+  flex-direction: row;
+  padding:0.5rem 2%;
+  align-items: center;
+  color: rgb(145, 142, 142);
+  justify-content: flex-start;
+  border-bottom: 1px solid rgb(81, 80, 80);
+}
+.Problem-Box-1 {
+  width: 15%;
+  text-align: left;
+  background: none;
+  color: rgb(145, 142, 142);
+  font-size: 1rem;
+}
+.Problem-Box-2 {
+  width: 50%;
+  font-size: 1rem;
+  background: none;
+  overflow: hidden;
+  text-align: left;
+}
+.Problem-Box-4 {
+  width: 15%;
+  background: none;
+  font-size: 1rem;
+  text-align: left;
+}
+.Problem-Box-3 {
+  width: 18%;
+  background: none;
+  font-size: 1rem;
+  text-align: left;
+}
+.Problem-Div-2 {
+  width: 100%;
+  padding:0.5rem 2%;
+  display: flex;
+  text-decoration: none;
+  /* padding: 0rem 0.rem; */
+  flex-direction: row;
+  color: rgb(196, 194, 194);
+  align-items: center;
+  justify-content: flex-start;
+}
+.Problem-Outer-Div {
+  display: flex;
+  width: 100%;
+  color: rgb(196, 194, 194);
+  background: none;
+  
+  flex-direction: column;
+  justify-content: flex-start;
+}
+/* Apply background color to odd-numbered Problem-Div-2 */
+.Problem-Outer-Div .Problem-Div-2:nth-child(even) {
+  background-color: #ffffff2b;
+}
+
+/* Apply background color to even-numbered Problem-Div-2 */
+.Problem-Outer-Div .Problem-Div-2:nth-child(odd) {
+  background-color: #0d0b24;
+}
+.Problem-Box-1 img{
+    height:2rem;
+    width:2rem;
+}

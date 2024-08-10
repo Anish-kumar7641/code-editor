@@ -1,0 +1,21 @@
+.grids{
+    /* height: 100vh; */
+              margin: 0;
+    width:100vw;
+    /* height:100vh; */
+    min-height: calc( 100vh - 3rem );
+              background-color: #0d0b24;
+              
+              background-image: 
+                  linear-gradient(to right, #3f3e3e 0.1px, transparent 0.5px),
+                  linear-gradient(to bottom, #3f3e3e 0.1px, transparent 0.6px);
+              background-size: 18px 18px; /* Adjust the size of the grid cells */
+  }
+.Landing-Layout{
+    box-sizing: border-box;
+  width:100%;
+    overflow-x: hidden;
+    height:auto;
+    min-height:100vh;
+
+}

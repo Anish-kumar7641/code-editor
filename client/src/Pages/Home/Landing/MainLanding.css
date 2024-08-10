@@ -1,0 +1,31 @@
+.Main-Landing-Main{
+    width:100%;
+    padding:2rem 0%;
+    display:flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.Main-Landing-1{
+
+    margin-top: 10rem;
+    font-size:2.7rem;
+    font: bold;
+    color: white;
+}
+.Main-Landing-2{
+    /* margin-top: 1rem; */
+    font-size: 0.9rem;
+    text-align: center;
+    max-width: 26rem;
+    color: white;
+}
+.Main-Landing-Button{
+    color: black;
+    font-size: 1.1rem;
+    font: bold;
+    background-color: white;
+    border-radius: 6px;
+    padding:0.3rem 1.5rem;
+}
