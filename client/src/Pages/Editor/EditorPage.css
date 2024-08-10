@@ -103,3 +103,27 @@
 .subNavTitle span{
     color: aliceblue;
 }
+.submitButton {
+    width: 20rem;
+    height: 2rem;
+    margin-top: 1px;
+    padding: 0.5rem 1rem; /* Adjusted padding for better spacing */
+    line-height: 2rem; /* Align text vertically */
+    font-size: 1.2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    cursor: pointer;
+    text-align: center; /* Center text horizontally */
+    font-weight: 600; /* Bold text for emphasis */
+  }
+  
+  .submitButton:hover {
+    background-color: #45a049;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+  }
+  
+  
