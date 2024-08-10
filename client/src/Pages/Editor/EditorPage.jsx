@@ -5,10 +5,11 @@ import "./EditorPage.css";
 
 function EditorPage() {
   const [code, setCode] = useState("// Write your code here");
-  const [response, setResponse] = useState(null);
+  const [testCases, setTestCases] = useState(""); 
+  const [response, setResponse] = useState(""); 
 
   function handleEditorChange(value, event) {
-    setCode(value); // Update the code state when editor content changes
+    setCode(value); 
   }
   
   function handleEditorDidMount(editor, monaco) {
@@ -27,10 +28,14 @@ function EditorPage() {
 
   const handleSubmit = async () => {
     try {
-      const result = await axios.post('/api/submit', { code });
-      setResponse(result.data); // Store the response data
+      const result = await axios.post('http://localhost:8000/compile', { code, testCases });
+      setResponse(result.data.output);
     } catch (error) {
-      setResponse({ error: 'Submission failed' }); // Handle errors
+      if (error.response && error.response.data.error) {
+        setResponse(`Error: ${error.response.data.error}`);
+      } else {
+        setResponse('Submission failed');
+      }
     }
   };
 
@@ -51,28 +56,32 @@ function EditorPage() {
               <Editor
                 defaultLanguage="cpp"
                 defaultValue="// some comment"
-                onChange={handleEditorChange} // Update state on code change
+                onChange={handleEditorChange} 
                 onMount={handleEditorDidMount}
                 beforeMount={handleEditorWillMount}
                 onValidate={handleEditorValidation}
                 theme="vs-dark"
               />
             </div> 
+            
             <button className="submitButton" onClick={handleSubmit}>
               Submit Code
             </button>
-            {/* <pre>{response ? JSON.stringify(response, null, 2) : ''}</pre> */}
           </div>
         </div>
         <div className="rightEditorContainer">
-          <div className="testContainer">
-            <div className="subNav">
-              <div className="subNavTitle">🖊️<span>Test Case</span></div>
-            </div>
-          </div>
+              <textarea 
+              value={testCases} 
+              onChange={(e) => setTestCases(e.target.value)}
+              placeholder="Command Line Input"
+              className="testCasesInput"
+            />
           <div className="outputContainer">
             <div className="subNav">
               <div className="subNavTitle">📝<span>Output</span></div>
+            </div>
+            <div className="outputContent" style={{color:"white", whiteSpace: 'pre-wrap', fontFamily: 'monospace' }}>
+              {response ? response : ""}
             </div>
           </div>
         </div>
